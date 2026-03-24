@@ -5,11 +5,11 @@
     text-align: center;
 }
 html , body{
-background-color: black;
-
+background-color: rgb(235, 148, 148);
+ 
 }
 .main_container{
-    border: 7px border rgb(16, 38, 93);
+    border: 7px solid rgb(16, 38, 93);
     border-radius: 50px;
     margin: 2rem;
     background-color: rgb(183, 99, 243);
