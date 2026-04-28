@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class MediaMedianaModa {
+public class MediaModaMediana {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int can;
@@ -28,7 +28,7 @@ public class MediaMedianaModa {
             System.out.println("2- Calcular la moda");
             System.out.println("3- Calcular la media");
             System.out.println("4- Quiero regresar a ingresar los numeros");
-             eleccion = sc.nextInt();
+                eleccion = sc.nextInt();
             
             switch(eleccion){
                 case 1:
@@ -73,7 +73,6 @@ public class MediaMedianaModa {
                         int suma=0;
                     for(int i=0;i<can;i++){
                             suma+=m[i];
-                   
                         }
                     double media =suma/can;
                     System.out.println("La media es: "+ media);
@@ -88,8 +87,9 @@ public class MediaMedianaModa {
             }
         }while(eleccion !=0 );
         
-        }
-       else{System.out.println("Lo siento tu no puedes estar aqui ");    }
+        }else{System.out.println("Lo siento tu no puedes estar aqui ");    }
         
+sc.close();  
     }
+
 }

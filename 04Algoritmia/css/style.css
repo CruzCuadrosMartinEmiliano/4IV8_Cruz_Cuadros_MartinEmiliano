@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flexbox;
+    background-color: #F4F1DE;
+}
+.container{
+    padding:40px ;
+}
+.problema1-container{
+    background-color: #81B29A;
+    padding: 30px;
+    width: 800px; 
+    border-radius: 20px;
+}
+.problema2-container{
+    background-color: #81B29A;
+    padding:30px ;
+    border-radius: 20px;
+
+}
+.problema3-container{
+    background-color: #81B29A;
+    padding: 30px;
+    border-radius:20px ;
+    width: 700px; 
+}
+.problema-content{
+    font-family:'Montserrat', sans-serif;
+
+}
+.problema-table{
+    background-color: #3D405B;
+    padding:20px ;
+    color: #F4F1DE;
+    border: 1px solid #F4F1DE;
+    border-radius:20px ;
+    
+}
+.problema-table input{
+    border-radius:20px ;
+    background-color: #F4F1DE;
+    padding: 3px;
+}
+table,th,td{
+    border: 1px solid #F4F1DE;
+}
+.problema-button{
+    background-color: #3D405B;
+    color: #F4F1DE;
+    padding: 5px;
+    border-radius:10px ;
+}
+.problema-output{
+    padding: 10px;
+    font-size: large;
+}
+.problema-input{
+    background-color: #F4F1DE;
+    color: #3D405B;
+    border-radius: 10px;
+    padding: 5px;
+}
+nav{
+    background-color: #3D405B;
+    font-size: large;
+    padding: 20px;
+}
+nav a {
+    color: #F4F1DE;
+}
