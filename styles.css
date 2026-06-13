@@ -1,0 +1,137 @@
+/* Variables basadas exactamente en tu paleta de colores */
+:root {
+    --bg-main: #F8FAFC;         /* Gris muy claro/slate de fondo general */
+    --bg-card: #FFFFFF;         /* Blanco puro para el contenedor */
+    --text-primary: #0F172A;    /* Azul oscuro profundo para títulos */
+    --text-secondary: #64748B;  /* Gris slate para descripciones */
+    --border-color: #E2E8F0;    /* Gris claro para líneas y bordes */
+    --primary-accent: #4F46E5;  /* Azul Índigo vibrante para botones principales */
+    --primary-hover: #4338ca;   /* Índigo oscuro para efectos hover */
+}
+
+/* Estilos Generales y del Fondo */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Contenedor Principal (Tarjeta del Portafolio) */
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+}
+
+/* Texto de Descripción de Alumno */
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.description strong {
+    color: var(--text-primary);
+}
+
+/* Subtítulo de Aprendizajes (h2) */
+h2 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-accent);
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+/* Rejilla de Botones (Grid Adaptable) */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+/* Estilo Base para todos los Botones */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+/* Efecto hover por defecto (Gris sutil de tu paleta) */
+.btn:hover {
+    background-color: var(--border-color);
+    border-color: var(--text-secondary);
+    transform: translateY(-2px);
+}
+
+/* --- Botones Especiales Destacados --- */
+
+/* Botón de Inicio (Verde suave que combina con la paleta limpia) */
+.btn-practica1 {
+    background-color: #10b981;
+    color: white;
+    border: none;
+}
+
+.btn-practica1:hover {
+    background-color: #059669;
+    color: white;
+}
+
+/* Botón Práctica 01 (Color de acento Índigo de tu paleta) */
+.btn-practica4 {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.15);
+}
+
+.btn-practica4:hover {
+    background-color: var(--primary-hover);
+    color: white;
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
+}
+
+/* Efecto de pulsación al hacer clic */
+.btn:active {
+    transform: translateY(0);
+}

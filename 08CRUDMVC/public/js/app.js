@@ -785,6 +785,8 @@ function limpiarFormPlayer() {
     errorPlayerEquipo.textContent = '';
     inputPlayerNombre.classList.remove('input-error');
     if (selectEquipo) selectEquipo.classList.remove('input-error');
+    if (inputPlayerEdad) inputPlayerEdad.classList.remove('input-error');    
+    if (inputPlayerAltura) inputPlayerAltura.classList.remove('input-error');
 }
 
 // ============================================================

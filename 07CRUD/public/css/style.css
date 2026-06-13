@@ -1,0 +1,223 @@
+/* Variables de la paleta de colores provista */
+:root {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --border-color: #E2E8F0;
+    --primary-accent: #4F46E5;
+    --primary-hover: #4338ca;
+    --danger-color: #ef4444;
+}
+
+/* Estilos Generales y Distribución */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--bg-card);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Contenedor Principal (Main) */
+main {
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+/* Secciones (Formulario y Tabla) como tarjetas independientes */
+.formulario-section, .table-section {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+/* Elementos del Formulario */
+.campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.campo input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.campo input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Mensajes de error */
+.error {
+    font-size: 0.8rem;
+    color: var(--danger-color);
+    margin-top: 4px;
+}
+
+/* Botones nativos del formulario */
+button {
+    padding: 11px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+/* Botón Guardar (Principal) */
+button[type="submit"], #btn-guardar {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+button[type="submit"]:hover, #btn-guardar:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Botón Cancelar (Secundario) */
+.btn-secundario {
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secundario:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Estados de carga / Mensajes */
+#mensaje-carga, #mensaje-vacio {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Estilos de la Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+tr:hover td {
+    background-color: rgba(248, 250, 252, 0.8);
+}
+
+/* --- FOOTER Y BOTÓN DE RETORNO --- */
+footer {
+    width: 100%;
+    margin-top: auto; 
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: var(--text-primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-back .arrow {
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--primary-accent);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-back:hover .arrow {
+    transform: rotate(45deg) translate(-2px, 2px);
+}
+
+.btn-back:active {
+    transform: translateY(0);
+}
